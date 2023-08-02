@@ -15,10 +15,7 @@ const AuthProvider = ({ children }: Props) => {
 	return (
 		<MsalProvider instance={msalInstance}>
 			<AuthContext.Provider value={{}}>
-				<button onClick={() => {
-					console.log("login");
-					// instance.loginRedirect();
-				}}>Login</button>
+				<Auth />
 				{children}
 			</AuthContext.Provider>
 		</MsalProvider>
@@ -30,14 +27,23 @@ export default AuthProvider;
 
 
 export const Auth = () => {
+	const { instance } = useMsal();
 	useEffect(() => {
 		console.log("auth")
-console.log(msalInstance)
+		// console.log(msalInstance)
 	}, [])
-	return <MsalProvider instance={msalInstance}>
-		<button onClick={() => {
-			console.log("login");
-			// instance.loginRedirect();
-		}}>test</button>
-	</MsalProvider>
+	return <>
+
+		<MsalProvider instance={msalInstance}>
+			<button onClick={() => {
+				console.log("login");
+				instance.loginRedirect();
+			}}>A</button>
+			<button onClick={() => {
+				instance.loginPopup()
+				// instance.loginRedirect();
+				console.log("login");
+			}}>test</button>
+		</MsalProvider>
+	</>
 }

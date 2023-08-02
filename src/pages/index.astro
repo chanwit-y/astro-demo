@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AuthProvider, {Auth} from "../components/auth";
+// import  {Auth} from "../components/auth";
 import { Button } from "../components/Button";
+import AuthProvider from "../components/auth";
 
 ---
 
-  <AuthProvider  >
+  <AuthProvider  client:load  >
 	  <h1>Welcome to Astro.</h1>
     <p>
       This is a demo of Astro, a new static site builder for the modern web.
@@ -13,4 +14,4 @@ import { Button } from "../components/Button";
     <p>
   </AuthProvider>
 <Button client:load />
-<Auth  client:load />
+<!-- <Auth  client:load /> -->
