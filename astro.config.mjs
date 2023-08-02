@@ -5,5 +5,6 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), svelte()]
+  integrations: [react(), svelte()],
+  server: { port: 3001, host: true}
 });

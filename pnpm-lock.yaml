@@ -11,6 +11,12 @@ dependencies:
   '@astrojs/svelte':
     specifier: ^3.1.0
     version: 3.1.0(astro@2.9.7)(svelte@4.1.2)(typescript@5.1.6)(vite@4.4.8)
+  '@azure/msal-browser':
+    specifier: ^2.38.0
+    version: 2.38.0
+  '@azure/msal-react':
+    specifier: ^1.5.9
+    version: 1.5.9(@azure/msal-browser@2.38.0)(react@18.2.0)
   '@types/react':
     specifier: ^18.0.21
     version: 18.2.18
@@ -153,6 +159,29 @@ packages:
     resolution: {integrity: sha512-mHAOApWyjqSe5AQMOUD9rsZJqbMQqe3Wosb1a40JV6Okvyxj1G6GTlthwYadWCymq/lbgwh0PLiY8Fr4eFxtuQ==}
     dependencies:
       undici: 5.22.1
+    dev: false
+
+  /@azure/msal-browser@2.38.0:
+    resolution: {integrity: sha512-gxBh83IumHgEP9uMCm9pJLKLRwICMQTxG9TX3AytdNt3oLUI3tytm/szYD5u5zKJgSkhHvwFSM+NPnM04hYw3w==}
+    engines: {node: '>=0.8.0'}
+    dependencies:
+      '@azure/msal-common': 13.2.0
+    dev: false
+
+  /@azure/msal-common@13.2.0:
+    resolution: {integrity: sha512-rnstQ7Zgn3fSTKNQO+/YNV34/QXJs0vni7IA0/3QB1EEyrJg14xyRmTqlw9ta+pdSuT5OJwUP8kI3D/rBwUIBw==}
+    engines: {node: '>=0.8.0'}
+    dev: false
+
+  /@azure/msal-react@1.5.9(@azure/msal-browser@2.38.0)(react@18.2.0):
+    resolution: {integrity: sha512-OqlBmo3h2ucp+OtpXwjNcKaUdIwRMUoEcixZz9rKzHJJ8VR7rngy2pHf+4tCTqwQXQOsRKdneNKG3Osh/AAhzg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@azure/msal-browser': ^2.38.0
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      '@azure/msal-browser': 2.38.0
+      react: 18.2.0
     dev: false
 
   /@babel/code-frame@7.22.5:

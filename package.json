@@ -12,6 +12,8 @@
   "dependencies": {
     "@astrojs/react": "^2.2.1",
     "@astrojs/svelte": "^3.1.0",
+    "@azure/msal-browser": "^2.38.0",
+    "@azure/msal-react": "^1.5.9",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.9.7",
